@@ -24,14 +24,14 @@ EMAIL           = "aksnr@protonmail.com"
 LINKEDIN_URL    = "https://www.linkedin.com/in/aksnr"
 
 # SVG geometry
-SVG_WIDTH   = 520
-PADDING_X   = 20
-PADDING_Y   = 36
-LINE_HEIGHT = 22
+SVG_WIDTH   = 820
+PADDING_X   = 38
+PADDING_Y   = 46
+LINE_HEIGHT = 23
 
 # Dot-leader key column width (characters in monospace)
 KEY_COL = 24
-LINE_CHAR_LIMIT = 50
+LINE_CHAR_LIMIT = 72
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  THEMES
@@ -268,7 +268,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
         font-size: 16px;
         font-weight: 700;
       }}
-      @media (max-width: 440px) {{
+      @media (max-width: 500px) {{
         text, .base, .title, .sub {{
           font-size: 16px;
         }}
