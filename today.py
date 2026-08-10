@@ -245,9 +245,9 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
   <title>{GITHUB_USERNAME}@dev — GitHub Stats Card</title>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&amp;display=swap');
       text, .base, .title, .sub {{
-        font-family: 'JetBrains Mono', monospace;
+        font-family: 'Cascadia Mono', monospace;
         font-size: 13px;
       }}
     </style>
