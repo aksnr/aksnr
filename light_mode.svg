@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="100%"
-     viewBox="0 0 820 687"
-     style="max-width: 820px; height: auto;"
+     viewBox="0 0 720 687"
+     style="max-width: 720px; height: auto;"
      role="img" aria-label="aksnr@dev — GitHub card">
   <title>aksnr@dev — GitHub Stats Card</title>
   <defs>
@@ -27,7 +27,7 @@
   </defs>
 
   <!-- Card background -->
-  <rect width="820" height="687" rx="12" ry="12"
+  <rect width="720" height="687" rx="12" ry="12"
         fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
 
   <text x="38" y="46" class="header"><tspan fill="#2351BE">akash</tspan><tspan fill="#2351BE">@dev</tspan></text>

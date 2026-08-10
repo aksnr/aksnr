@@ -24,7 +24,7 @@ EMAIL           = "aksnr@protonmail.com"
 LINKEDIN_URL    = "https://www.linkedin.com/in/aksnr"
 
 # SVG geometry
-SVG_WIDTH   = 820
+SVG_WIDTH   = 720
 PADDING_X   = 38
 PADDING_Y   = 46
 LINE_HEIGHT = 23
