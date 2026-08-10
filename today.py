@@ -39,34 +39,32 @@ THEMES = {
     "dark": {
         "bg"      : "#0d1117",
         "border"  : "#30363d",
-        "accent"  : "#f78166",   # username colour
-        "at"      : "#ffa657",   # @dev colour
-        "sep"     : "#21262d",   # ── separator lines
-        "section" : "#3fb950",   # ── Section Header ──
-        "key"     : "#79c0ff",   # key name
-        "dot"     : "#3d444d",   # ............
-        "val"     : "#e6edf3",   # value text
-        "dim"     : "#6e7681",   # · · · dividers / dim text
+        "accent"  : "#30D9A4",   # username colour (Arc Bright Green)
+        "at"      : "#30D9A4",   # @dev colour (Arc Bright Green)
+        "sep"     : "#3B4D68",   # ── separator lines
+        "section" : "#30D9A4",   # ── Section Header ── (Arc Bright Green)
+        "key"     : "#E8ECF2",   # key name (Arc base text)
+        "dot"     : "#3B4D68",   # ............
+        "val"     : "#E8ECF2",   # value text (Arc base text)
+        "dim"     : "#3B4D68",   # · · · dividers / dim text
     },
     "light": {
         "bg"      : "#ffffff",
         "border"  : "#d0d7de",
-        "accent"  : "#cf222e",
-        "at"      : "#953800",
-        "sep"     : "#d0d7de",
-        "section" : "#116329",
-        "key"     : "#0550ae",
-        "dot"     : "#c9d1d9",
-        "val"     : "#24292f",
-        "dim"     : "#6e7781",
+        "accent"  : "#2351BE",   # username colour (Arc Bright Blue)
+        "at"      : "#2351BE",   # @dev colour (Arc Bright Blue)
+        "sep"     : "#3B4D68",   # ── separator lines
+        "section" : "#2351BE",   # ── Section Header ── (Arc Bright Blue)
+        "key"     : "#0D1117",   # key name (Arc base text)
+        "dot"     : "#3B4D68",   # ............
+        "val"     : "#0D1117",   # value text (Arc base text)
+        "dim"     : "#3B4D68",   # · · · dividers / dim text
     },
 }
 
 SWATCHES = {
-    "dark" : ["#ff7b72","#ffa657","#e3b341","#3fb950",
-               "#58a6ff","#bc8cff","#f778ba","#8b949e"],
-    "light": ["#cf222e","#953800","#9a6700","#116329",
-               "#0550ae","#8250df","#bf3989","#57606a"],
+    "dark" : ["#C32424", "#24C391", "#C3A924", "#2455C3", "#C224C3", "#24BAC3"],
+    "light": ["#C32424", "#24C391", "#C3A924", "#2455C3", "#C224C3", "#24BAC3"],
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -214,8 +212,8 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     # ── Contact ──────────────────────────────────────────────────────────
     add("── Contact ────────────────────────────────────", "section")
     add("·" * 62, "dim")
-    L.append(_kv("Email",    EMAIL,    f"mailto:{EMAIL}"))
-    L.append(_kv("LinkedIn", "aksnr",  LINKEDIN_URL))
+    L.append(_kv("Email",    EMAIL))
+    L.append(_kv("LinkedIn", "aksnr"))
     add("", "blank")
 
     # ── GitHub Stats ──────────────────────────────────────────────────────
@@ -231,7 +229,7 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     add("", "blank")
 
     # ── Colour swatch ─────────────────────────────────────────────────────
-    add("  ● ● ● ● ● ● ● ●", "swatch")
+    add("  ● ● ● ● ● ●", "swatch")
 
     return L
 
@@ -261,9 +259,9 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
   <title>{GITHUB_USERNAME}@dev — GitHub Stats Card</title>
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      text {{
-        font-family: "JetBrains Mono","Cascadia Code","Fira Code",Consolas,monospace;
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap');
+      text, .base, .title, .sub {{
+        font-family: 'JetBrains Mono', monospace;
         font-size: 13px;
       }}
     </style>
