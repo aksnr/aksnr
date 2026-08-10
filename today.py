@@ -71,25 +71,11 @@ SWATCHES = {
 #  UPTIME CALCULATOR
 # ─────────────────────────────────────────────────────────────────────────────
 def uptime_from_dob(dob: datetime.date) -> str:
-    today  = datetime.date.today()
-    years  = today.year  - dob.year
-    months = today.month - dob.month
-    days   = today.day   - dob.day
-
-    if days < 0:
-        months -= 1
-        # how many days in the previous month?
-        pm  = today.month - 1 or 12
-        py  = today.year if today.month > 1 else today.year - 1
-        nm  = pm % 12 + 1
-        ny  = py if pm < 12 else py + 1
-        days += (datetime.date(ny, nm, 1) - datetime.date(py, pm, 1)).days
-
-    if months < 0:
-        years  -= 1
-        months += 12
-
-    return f"{years} years, {months} months, {days} days"
+    today = datetime.date.today()
+    years = today.year - dob.year
+    if (today.month, today.day) < (dob.month, dob.day):
+        years -= 1
+    return f"{years} years"
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  GITHUB GRAPHQL + REST HELPERS
@@ -176,19 +162,19 @@ def fetch_github_stats(token: str) -> dict:
     }
 
 # ─────────────────────────────────────────────────────────────────────────────
-#  LAYOUT BUILDER  →  list of (text, style, url|None) tuples
+#  LAYOUT BUILDER  →  list of (text, style) tuples
 # ─────────────────────────────────────────────────────────────────────────────
-def _kv(key: str, val: str, url: str | None = None) -> tuple:
-    """Build a dot-leader row.  KEY........... VALUE  (url makes value a link)"""
+def _kv(key: str, val: str) -> tuple:
+    """Build a dot-leader row.  KEY........... VALUE"""
     dots = max(2, KEY_COL - len(key))
-    return (f"{key}{'.' * dots} {val}", "kv", url)
+    return (f"{key}{'.' * dots} {val}", "kv")
 
 
 def build_lines(stats: dict, uptime: str) -> list[tuple]:
     L = []
 
     def add(text, style="val"):
-        L.append((text, style, None))
+        L.append((text, style))
 
     # ── Header ────────────────────────────────────────────────────────────
     add(f"akash@dev", "header")
@@ -210,7 +196,7 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     add("", "blank")
 
     # ── Contact ──────────────────────────────────────────────────────────
-    add("── Contact ────────────────────────────────────", "section")
+    add("── Contact ───────────────────────────────────────", "section")
     add("·" * 62, "dim")
     L.append(_kv("Email",    EMAIL))
     L.append(_kv("LinkedIn", "aksnr"))
@@ -276,7 +262,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
     y = PADDING_Y
 
     for item in lines:
-        text, style, url = item[0], item[1], item[2] if len(item) > 2 else None
+        text, style = item[0], item[1]
         x = PADDING_X
 
         # ── blank spacer ──────────────────────────────────────────────────
@@ -342,21 +328,11 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
             d_part = _esc(text[dot_start:dot_end])
             v_part = _esc(text[dot_end:])
 
-            if url:
-                # Value becomes a clickable hyperlink
-                v_node = (
-                    f'<a href="{_esc(url)}" target="_blank" rel="noopener noreferrer">'
-                    f'<tspan fill="{t["key"]}" text-decoration="underline">{v_part}</tspan>'
-                    f'</a>'
-                )
-            else:
-                v_node = f'<tspan fill="{t["val"]}">{v_part}</tspan>'
-
             parts.append(
                 f'  <text x="{x}" y="{y}">'
                 f'<tspan fill="{t["key"]}" font-weight="600">{k_part}</tspan>'
                 f'<tspan fill="{t["dot"]}">{d_part}</tspan>'
-                f'{v_node}'
+                f'<tspan fill="{t["val"]}">{v_part}</tspan>'
                 f'</text>\n'
             )
 
