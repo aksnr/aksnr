@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="820" height="733"
+     viewBox="0 0 820 733"
+     role="img" aria-label="aksnr@dev — GitHub card">
+  <title>aksnr@dev — GitHub Stats Card</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      text {
+        font-family: "JetBrains Mono","Cascadia Code","Fira Code",Consolas,monospace;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="820" height="733" rx="12" ry="12"
+        fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+
+  <text x="38" y="46" font-weight="700" font-size="15px"><tspan fill="#cf222e">akash</tspan><tspan fill="#953800">@dev</tspan></text>
+  <text x="38" y="69" fill="#d0d7de">──────────────────────────────────────────────────────────────</text>
+  <text x="38" y="92"><tspan fill="#0550ae" font-weight="600">OS</tspan><tspan fill="#c9d1d9">......................</tspan><tspan fill="#24292f"> Linux  /  Windows 11</tspan></text>
+  <text x="38" y="115"><tspan fill="#0550ae" font-weight="600">Uptime</tspan><tspan fill="#c9d1d9">..................</tspan><tspan fill="#24292f"> 24 years, 1 months, 15 days</tspan></text>
+  <text x="38" y="138"><tspan fill="#0550ae" font-weight="600">Host</tspan><tspan fill="#c9d1d9">....................</tspan><tspan fill="#24292f"> Akash S Nair</tspan></text>
+  <text x="38" y="184" fill="#116329" font-weight="700">── Stack &amp; Languages ─────────────────────────────</text>
+  <text x="38" y="207" fill="#6e7781">······························································</text>
+  <text x="38" y="230"><tspan fill="#0550ae" font-weight="600">Languages</tspan><tspan fill="#c9d1d9">.</tspan><tspan fill="#24292f">Programming... JavaScript, Python, Bash</tspan></text>
+  <text x="38" y="253"><tspan fill="#0550ae" font-weight="600">Stack</tspan><tspan fill="#c9d1d9">.</tspan><tspan fill="#24292f">Web &amp; Frameworks.. React.js, Express.js, Node.js, HTML5, CSS3</tspan></text>
+  <text x="38" y="276"><tspan fill="#0550ae" font-weight="600">Databases</tspan><tspan fill="#c9d1d9">...............</tspan><tspan fill="#24292f"> MongoDB, PostgreSQL, SQL, Git</tspan></text>
+  <text x="38" y="299"><tspan fill="#0550ae" font-weight="600">Focus</tspan><tspan fill="#c9d1d9">.</tspan><tspan fill="#24292f">Areas............. MERN Stack, Systems &amp; Linux, Cybersecurity</tspan></text>
+  <text x="38" y="345" fill="#116329" font-weight="700">── Contact ────────────────────────────────────</text>
+  <text x="38" y="368" fill="#6e7781">······························································</text>
+  <text x="38" y="391"><tspan fill="#0550ae" font-weight="600">Email</tspan><tspan fill="#c9d1d9">...................</tspan><a href="mailto:aksnr@protonmail.com" target="_blank" rel="noopener noreferrer"><tspan fill="#0550ae" text-decoration="underline"> aksnr@protonmail.com</tspan></a></text>
+  <text x="38" y="414"><tspan fill="#0550ae" font-weight="600">LinkedIn</tspan><tspan fill="#c9d1d9">................</tspan><a href="https://www.linkedin.com/in/aksnr" target="_blank" rel="noopener noreferrer"><tspan fill="#0550ae" text-decoration="underline"> aksnr</tspan></a></text>
+  <text x="38" y="460" fill="#116329" font-weight="700">── GitHub Stats ──────────────────────────────────</text>
+  <text x="38" y="483" fill="#6e7781">······························································</text>
+  <text x="38" y="506"><tspan fill="#0550ae" font-weight="600">Repos</tspan><tspan fill="#c9d1d9">...................</tspan><tspan fill="#24292f"> 4</tspan></text>
+  <text x="38" y="529"><tspan fill="#0550ae" font-weight="600">Stars</tspan><tspan fill="#c9d1d9">...................</tspan><tspan fill="#24292f"> 0</tspan></text>
+  <text x="38" y="552"><tspan fill="#0550ae" font-weight="600">Commits</tspan><tspan fill="#c9d1d9">.................</tspan><tspan fill="#24292f"> 7</tspan></text>
+  <text x="38" y="575"><tspan fill="#0550ae" font-weight="600">Followers</tspan><tspan fill="#c9d1d9">...............</tspan><tspan fill="#24292f"> 0</tspan></text>
+  <text x="38" y="598"><tspan fill="#0550ae" font-weight="600">Lines of Code</tspan><tspan fill="#c9d1d9">...........</tspan><tspan fill="#24292f"> 2  (+2 / -0)</tspan></text>
+  <circle cx="46" cy="639" r="7" fill="#cf222e"/>
+  <circle cx="72" cy="639" r="7" fill="#953800"/>
+  <circle cx="98" cy="639" r="7" fill="#9a6700"/>
+  <circle cx="124" cy="639" r="7" fill="#116329"/>
+  <circle cx="150" cy="639" r="7" fill="#0550ae"/>
+  <circle cx="176" cy="639" r="7" fill="#8250df"/>
+  <circle cx="202" cy="639" r="7" fill="#bf3989"/>
+  <circle cx="228" cy="639" r="7" fill="#57606a"/>
+</svg>
