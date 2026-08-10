@@ -150,7 +150,7 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
 
     # ── Header ────────────────────────────────────────────────────────────
     add(f"akash@dev", "header")
-    add("─" * 62, "sep")
+    add("─" * 72, "sep")
 
     # ── System ────────────────────────────────────────────────────────────
     L.append(_kv("OS",     "Linux  /  Windows 11"))
@@ -159,8 +159,8 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     add("", "blank")
 
     # ── Stack & Languages ─────────────────────────────────────────────────
-    add("── Stack & Languages ─────────────────────────────", "section")
-    add("·" * 62, "dim")
+    add("── Stack & Languages ───────────────────────────────────────────────────", "section")
+    add("·" * 72, "dim")
     L.append(_kv("Programming Languages",  "JavaScript, Python, Bash"))
     L.append(_kv("Frameworks", "React.js, Express.js, Node.js, HTML5, CSS3"))
     L.append(_kv("Databases",             "MongoDB, PostgreSQL, SQL"))
@@ -168,15 +168,15 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     add("", "blank")
 
     # ── Contact ──────────────────────────────────────────────────────────
-    add("── Contact ───────────────────────────────────────", "section")
-    add("·" * 62, "dim")
+    add("── Contact ─────────────────────────────────────────────────────────────", "section")
+    add("·" * 72, "dim")
     L.append(_kv("Email",    EMAIL))
     L.append(_kv("LinkedIn", "aksnr"))
     add("", "blank")
 
     # ── GitHub Stats ──────────────────────────────────────────────────────
-    add("── GitHub Stats ──────────────────────────────────", "section")
-    add("·" * 62, "dim")
+    add("── GitHub Stats ────────────────────────────────────────────────────────", "section")
+    add("·" * 72, "dim")
     L.append(_kv("Repos",         str(stats["repos"])))
     L.append(_kv("Stars",         str(stats["stars"])))
     L.append(_kv("Commits",       str(stats["commits"])))
