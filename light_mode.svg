@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="820" height="687"
-     viewBox="0 0 820 687"
+     width="100%"
+     viewBox="0 0 460 722"
+     style="max-width: 460px; height: auto;"
      role="img" aria-label="aksnr@dev — GitHub card">
   <title>aksnr@dev — GitHub Stats Card</title>
   <defs>
@@ -8,39 +9,43 @@
       @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&amp;display=swap');
       text, .base, .title, .sub {
         font-family: 'Cascadia Mono', monospace;
-        font-size: 14px;
+        font-size: 16px;
       }
     </style>
   </defs>
 
   <!-- Card background -->
-  <rect width="820" height="687" rx="12" ry="12"
+  <rect width="460" height="722" rx="12" ry="12"
         fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
 
-  <text x="38" y="46" font-weight="700" font-size="16px"><tspan fill="#2351BE">akash</tspan><tspan fill="#2351BE">@dev</tspan></text>
-  <text x="38" y="69" fill="#3B4D68">────────────────────────────────────────────────────────────────────────</text>
-  <text x="38" y="92"><tspan fill="#0D1117" font-weight="600">OS</tspan><tspan fill="#3B4D68">......................</tspan><tspan fill="#0D1117"> Linux  /  Windows 11</tspan></text>
-  <text x="38" y="115"><tspan fill="#0D1117" font-weight="600">Uptime</tspan><tspan fill="#3B4D68">..................</tspan><tspan fill="#0D1117"> 24 years</tspan></text>
-  <text x="38" y="138"><tspan fill="#0D1117" font-weight="600">Host</tspan><tspan fill="#3B4D68">....................</tspan><tspan fill="#0D1117"> Akash S Nair</tspan></text>
-  <text x="38" y="184" fill="#2351BE" font-weight="700">── Stack &amp; Languages ───────────────────────────────────────────────────</text>
-  <text x="38" y="207" fill="#3B4D68">········································································</text>
-  <text x="38" y="230"><tspan fill="#0D1117" font-weight="600">Programming Languages</tspan><tspan fill="#3B4D68">...</tspan><tspan fill="#0D1117"> JavaScript, Python, Bash</tspan></text>
-  <text x="38" y="253"><tspan fill="#0D1117" font-weight="600">Frameworks</tspan><tspan fill="#3B4D68">..............</tspan><tspan fill="#0D1117"> React.js, Express.js, Node.js, HTML5, CSS3</tspan></text>
-  <text x="38" y="276"><tspan fill="#0D1117" font-weight="600">Databases</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> MongoDB, PostgreSQL, SQL</tspan></text>
-  <text x="38" y="299"><tspan fill="#0D1117" font-weight="600">Focus Areas</tspan><tspan fill="#3B4D68">.............</tspan><tspan fill="#0D1117"> MERN Stack, Systems &amp; Linux, Cybersecurity</tspan></text>
-  <text x="38" y="345" fill="#2351BE" font-weight="700">── Contact ─────────────────────────────────────────────────────────────</text>
-  <text x="38" y="368" fill="#3B4D68">········································································</text>
-  <text x="38" y="391"><tspan fill="#0D1117" font-weight="600">Email</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> aksnr@protonmail.com</tspan></text>
-  <text x="38" y="414"><tspan fill="#0D1117" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#0D1117"> aksnr</tspan></text>
-  <text x="38" y="460" fill="#2351BE" font-weight="700">── GitHub Stats ────────────────────────────────────────────────────────</text>
-  <text x="38" y="483" fill="#3B4D68">········································································</text>
-  <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 4</tspan></text>
-  <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 0</tspan></text>
-  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 15</tspan></text>
-  <circle cx="46" cy="593" r="7" fill="#C32424"/>
-  <circle cx="72" cy="593" r="7" fill="#24C391"/>
-  <circle cx="98" cy="593" r="7" fill="#C3A924"/>
-  <circle cx="124" cy="593" r="7" fill="#2455C3"/>
-  <circle cx="150" cy="593" r="7" fill="#C224C3"/>
-  <circle cx="176" cy="593" r="7" fill="#24BAC3"/>
+  <text x="20" y="32" font-weight="700" font-size="18px"><tspan fill="#2351BE">akash</tspan><tspan fill="#2351BE">@dev</tspan></text>
+  <text x="20" y="54" fill="#3B4D68">──────────────────────────────────────────</text>
+  <text x="20" y="76"><tspan fill="#0D1117" font-weight="600">OS</tspan><tspan fill="#3B4D68">..................</tspan><tspan fill="#0D1117"> Linux  /  Windows 11</tspan></text>
+  <text x="20" y="98"><tspan fill="#0D1117" font-weight="600">Uptime</tspan><tspan fill="#3B4D68">..............</tspan><tspan fill="#0D1117"> 24 years</tspan></text>
+  <text x="20" y="120"><tspan fill="#0D1117" font-weight="600">User</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#0D1117"> Akash S Nair</tspan></text>
+  <text x="20" y="164" fill="#2351BE" font-weight="700">── Stack &amp; Languages ─────────────────────</text>
+  <text x="20" y="186" fill="#3B4D68">··········································</text>
+  <text x="20" y="208"><tspan fill="#0D1117" font-weight="600">Programming Languages</tspan><tspan fill="#3B4D68">..</tspan><tspan fill="#0D1117"> JavaScript,</tspan></text>
+  <text x="20" y="230"><tspan fill="#0D1117">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Python, Bash</tspan></text>
+  <text x="20" y="252"><tspan fill="#0D1117" font-weight="600">Frameworks</tspan><tspan fill="#3B4D68">..........</tspan><tspan fill="#0D1117"> React.js, Express.js,</tspan></text>
+  <text x="20" y="274"><tspan fill="#0D1117">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Node.js, HTML5, CSS3</tspan></text>
+  <text x="20" y="296"><tspan fill="#0D1117" font-weight="600">Databases</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#0D1117"> MongoDB, PostgreSQL,</tspan></text>
+  <text x="20" y="318"><tspan fill="#0D1117">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SQL</tspan></text>
+  <text x="20" y="340"><tspan fill="#0D1117" font-weight="600">Focus Areas</tspan><tspan fill="#3B4D68">.........</tspan><tspan fill="#0D1117"> MERN Stack, Systems &amp;</tspan></text>
+  <text x="20" y="362"><tspan fill="#0D1117">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Linux, Cybersecurity</tspan></text>
+  <text x="20" y="406" fill="#2351BE" font-weight="700">── Contact ───────────────────────────────</text>
+  <text x="20" y="428" fill="#3B4D68">··········································</text>
+  <text x="20" y="450"><tspan fill="#0D1117" font-weight="600">Email</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> aksnr@protonmail.com</tspan></text>
+  <text x="20" y="472"><tspan fill="#0D1117" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">............</tspan><tspan fill="#0D1117"> aksnr</tspan></text>
+  <text x="20" y="516" fill="#2351BE" font-weight="700">── GitHub Stats ──────────────────────────</text>
+  <text x="20" y="538" fill="#3B4D68">··········································</text>
+  <text x="20" y="560"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> 4</tspan></text>
+  <text x="20" y="582"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> 0</tspan></text>
+  <text x="20" y="604"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.............</tspan><tspan fill="#0D1117"> 15</tspan></text>
+  <circle cx="28" cy="643" r="7" fill="#C32424"/>
+  <circle cx="54" cy="643" r="7" fill="#24C391"/>
+  <circle cx="80" cy="643" r="7" fill="#C3A924"/>
+  <circle cx="106" cy="643" r="7" fill="#2455C3"/>
+  <circle cx="132" cy="643" r="7" fill="#C224C3"/>
+  <circle cx="158" cy="643" r="7" fill="#24BAC3"/>
 </svg>
