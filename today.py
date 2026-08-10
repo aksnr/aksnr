@@ -24,13 +24,14 @@ EMAIL           = "aksnr@protonmail.com"
 LINKEDIN_URL    = "https://www.linkedin.com/in/aksnr"
 
 # SVG geometry
-SVG_WIDTH   = 820
-PADDING_X   = 38
-PADDING_Y   = 46
-LINE_HEIGHT = 23
+SVG_WIDTH   = 460
+PADDING_X   = 20
+PADDING_Y   = 32
+LINE_HEIGHT = 22
 
 # Dot-leader key column width (characters in monospace)
-KEY_COL = 24
+KEY_COL = 20
+LINE_CHAR_LIMIT = 42
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  THEMES
@@ -136,10 +137,47 @@ def fetch_github_stats(token: str) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 #  LAYOUT BUILDER  →  list of (text, style) tuples
 # ─────────────────────────────────────────────────────────────────────────────
-def _kv(key: str, val: str) -> tuple:
-    """Build a dot-leader row.  KEY........... VALUE"""
-    dots = max(2, KEY_COL - len(key))
-    return (f"{key}{'.' * dots} {val}", "kv")
+def _kv_wrapped(key: str, val: str, limit: int = LINE_CHAR_LIMIT) -> list[tuple]:
+    """Build a dot-leader row, wrapping the value if it exceeds the limit."""
+    dots_count = max(2, KEY_COL - len(key))
+    key_col_width = len(key) + dots_count + 1  # key + dots + 1 space
+    val_limit = limit - key_col_width
+
+    # Wrap val into lines of max width val_limit
+    words = val.split(" ")
+    wrapped_lines = []
+    current_line = []
+    current_len = 0
+
+    for word in words:
+        added_len = len(word) + (1 if current_line else 0)
+        if current_len + added_len > val_limit:
+            if current_line:
+                wrapped_lines.append(" ".join(current_line))
+                current_line = [word]
+                current_len = len(word)
+            else:
+                wrapped_lines.append(word)
+                current_line = []
+                current_len = 0
+        else:
+            current_line.append(word)
+            current_len += added_len
+
+    if current_line:
+        wrapped_lines.append(" ".join(current_line))
+
+    L = []
+    if not wrapped_lines:
+        L.append((f"{key}{'.' * dots_count} ", "kv"))
+    else:
+        # First line contains key, dots, space, and first wrapped line
+        L.append((f"{key}{'.' * dots_count} {wrapped_lines[0]}", "kv"))
+        # Subsequent lines contain key_col_width spaces, and the wrapped line
+        indent = " " * key_col_width
+        for line in wrapped_lines[1:]:
+            L.append((f"{indent}{line}", "kv_val_only"))
+    return L
 
 
 def build_lines(stats: dict, uptime: str) -> list[tuple]:
@@ -148,38 +186,45 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     def add(text, style="val"):
         L.append((text, style))
 
+    def add_section(title: str):
+        prefix = "── "
+        suffix = " "
+        needed = LINE_CHAR_LIMIT - len(prefix) - len(title) - len(suffix)
+        if needed > 0:
+            add(f"{prefix}{title}{suffix}{'─' * needed}", "section")
+        else:
+            add(f"{prefix}{title}", "section")
+        add("·" * LINE_CHAR_LIMIT, "dim")
+
     # ── Header ────────────────────────────────────────────────────────────
     add(f"akash@dev", "header")
-    add("─" * 72, "sep")
+    add("─" * LINE_CHAR_LIMIT, "sep")
 
     # ── System ────────────────────────────────────────────────────────────
-    L.append(_kv("OS",     "Linux  /  Windows 11"))
-    L.append(_kv("Uptime", uptime))
-    L.append(_kv("Host",   FULL_NAME))
+    L.extend(_kv_wrapped("OS",     "Linux  /  Windows 11"))
+    L.extend(_kv_wrapped("Uptime", uptime))
+    L.extend(_kv_wrapped("User",   FULL_NAME))
     add("", "blank")
 
     # ── Stack & Languages ─────────────────────────────────────────────────
-    add("── Stack & Languages ───────────────────────────────────────────────────", "section")
-    add("·" * 72, "dim")
-    L.append(_kv("Programming Languages",  "JavaScript, Python, Bash"))
-    L.append(_kv("Frameworks", "React.js, Express.js, Node.js, HTML5, CSS3"))
-    L.append(_kv("Databases",             "MongoDB, PostgreSQL, SQL"))
-    L.append(_kv("Focus Areas",           "MERN Stack, Systems & Linux, Cybersecurity"))
+    add_section("Stack & Languages")
+    L.extend(_kv_wrapped("Programming Languages",  "JavaScript, Python, Bash"))
+    L.extend(_kv_wrapped("Frameworks", "React.js, Express.js, Node.js, HTML5, CSS3"))
+    L.extend(_kv_wrapped("Databases",             "MongoDB, PostgreSQL, SQL"))
+    L.extend(_kv_wrapped("Focus Areas",           "MERN Stack, Systems & Linux, Cybersecurity"))
     add("", "blank")
 
     # ── Contact ──────────────────────────────────────────────────────────
-    add("── Contact ─────────────────────────────────────────────────────────────", "section")
-    add("·" * 72, "dim")
-    L.append(_kv("Email",    EMAIL))
-    L.append(_kv("LinkedIn", "aksnr"))
+    add_section("Contact")
+    L.extend(_kv_wrapped("Email",    EMAIL))
+    L.extend(_kv_wrapped("LinkedIn", "aksnr"))
     add("", "blank")
 
     # ── GitHub Stats ──────────────────────────────────────────────────────
-    add("── GitHub Stats ────────────────────────────────────────────────────────", "section")
-    add("·" * 72, "dim")
-    L.append(_kv("Repos",         str(stats["repos"])))
-    L.append(_kv("Stars",         str(stats["stars"])))
-    L.append(_kv("Commits",       str(stats["commits"])))
+    add_section("GitHub Stats")
+    L.extend(_kv_wrapped("Repos",         str(stats["repos"])))
+    L.extend(_kv_wrapped("Stars",         str(stats["stars"])))
+    L.extend(_kv_wrapped("Commits",       str(stats["commits"])))
     add("", "blank")
 
     # ── Colour swatch ─────────────────────────────────────────────────────
@@ -207,8 +252,9 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
     # ── Outer shell ───────────────────────────────────────────────────────
     parts.append(f"""\
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="{SVG_WIDTH}" height="{h}"
+     width="100%"
      viewBox="0 0 {SVG_WIDTH} {h}"
+     style="max-width: {SVG_WIDTH}px; height: auto;"
      role="img" aria-label="{GITHUB_USERNAME}@dev — GitHub card">
   <title>{GITHUB_USERNAME}@dev — GitHub Stats Card</title>
   <defs>
@@ -216,7 +262,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
       @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&amp;display=swap');
       text, .base, .title, .sub {{
         font-family: 'Cascadia Mono', monospace;
-        font-size: 14px;
+        font-size: 16px;
       }}
     </style>
   </defs>
@@ -255,7 +301,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
             u_part  = _esc(text[:at_pos])
             at_part = _esc(text[at_pos:])
             parts.append(
-                f'  <text x="{x}" y="{y}" font-weight="700" font-size="16px">'
+                f'  <text x="{x}" y="{y}" font-weight="700" font-size="18px">'
                 f'<tspan fill="{t["accent"]}">{u_part}</tspan>'
                 f'<tspan fill="{t["at"]}">{at_part}</tspan>'
                 f'</text>\n'
@@ -301,6 +347,17 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
                 f'<tspan fill="{t["key"]}" font-weight="600">{k_part}</tspan>'
                 f'<tspan fill="{t["dot"]}">{d_part}</tspan>'
                 f'<tspan fill="{t["val"]}">{v_part}</tspan>'
+                f'</text>\n'
+            )
+
+        # ── Wrapped value only ────────────────────────────────────────────
+        elif style == "kv_val_only":
+            leading_spaces = len(text) - len(text.lstrip(' '))
+            non_breaking_spaces = '&#160;' * leading_spaces
+            v_part = _esc(text.lstrip(' '))
+            parts.append(
+                f'  <text x="{x}" y="{y}">'
+                f'<tspan fill="{t["val"]}">{non_breaking_spaces}{v_part}</tspan>'
                 f'</text>\n'
             )
 
