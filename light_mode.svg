@@ -20,7 +20,7 @@
   <text x="38" y="46" font-weight="700" font-size="15px"><tspan fill="#2351BE">akash</tspan><tspan fill="#2351BE">@dev</tspan></text>
   <text x="38" y="69" fill="#3B4D68">──────────────────────────────────────────────────────────────</text>
   <text x="38" y="92"><tspan fill="#0D1117" font-weight="600">OS</tspan><tspan fill="#3B4D68">......................</tspan><tspan fill="#0D1117"> Linux  /  Windows 11</tspan></text>
-  <text x="38" y="115"><tspan fill="#0D1117" font-weight="600">Uptime</tspan><tspan fill="#3B4D68">..................</tspan><tspan fill="#0D1117"> 24 years, 1 months, 15 days</tspan></text>
+  <text x="38" y="115"><tspan fill="#0D1117" font-weight="600">Uptime</tspan><tspan fill="#3B4D68">..................</tspan><tspan fill="#0D1117"> 24 years</tspan></text>
   <text x="38" y="138"><tspan fill="#0D1117" font-weight="600">Host</tspan><tspan fill="#3B4D68">....................</tspan><tspan fill="#0D1117"> Akash S Nair</tspan></text>
   <text x="38" y="184" fill="#2351BE" font-weight="700">── Stack &amp; Languages ─────────────────────────────</text>
   <text x="38" y="207" fill="#3B4D68">······························································</text>
@@ -28,7 +28,7 @@
   <text x="38" y="253"><tspan fill="#0D1117" font-weight="600">Stack</tspan><tspan fill="#3B4D68">.</tspan><tspan fill="#0D1117">Web &amp; Frameworks.. React.js, Express.js, Node.js, HTML5, CSS3</tspan></text>
   <text x="38" y="276"><tspan fill="#0D1117" font-weight="600">Databases</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> MongoDB, PostgreSQL, SQL, Git</tspan></text>
   <text x="38" y="299"><tspan fill="#0D1117" font-weight="600">Focus</tspan><tspan fill="#3B4D68">.</tspan><tspan fill="#0D1117">Areas............. MERN Stack, Systems &amp; Linux, Cybersecurity</tspan></text>
-  <text x="38" y="345" fill="#2351BE" font-weight="700">── Contact ────────────────────────────────────</text>
+  <text x="38" y="345" fill="#2351BE" font-weight="700">── Contact ───────────────────────────────────────</text>
   <text x="38" y="368" fill="#3B4D68">······························································</text>
   <text x="38" y="391"><tspan fill="#0D1117" font-weight="600">Email</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> aksnr@protonmail.com</tspan></text>
   <text x="38" y="414"><tspan fill="#0D1117" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#0D1117"> aksnr</tspan></text>
@@ -36,7 +36,7 @@
   <text x="38" y="483" fill="#3B4D68">······························································</text>
   <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 4</tspan></text>
   <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 0</tspan></text>
-  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 8</tspan></text>
+  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 10</tspan></text>
   <text x="38" y="575"><tspan fill="#0D1117" font-weight="600">Followers</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> 0</tspan></text>
   <text x="38" y="598"><tspan fill="#0D1117" font-weight="600">Lines of Code</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#0D1117"> 2  (+2 / -0)</tspan></text>
   <circle cx="46" cy="639" r="7" fill="#C32424"/>
