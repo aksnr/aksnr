@@ -51,7 +51,7 @@
   <text x="22" y="498" fill="#3B4D68">······················································</text>
   <text x="22" y="520"><tspan fill="#E8ECF2" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 4</tspan></text>
   <text x="22" y="542"><tspan fill="#E8ECF2" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 0</tspan></text>
-  <text x="22" y="564"><tspan fill="#E8ECF2" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#E8ECF2"> 18</tspan></text>
+  <text x="22" y="564"><tspan fill="#E8ECF2" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#E8ECF2"> 19</tspan></text>
   <circle cx="30" cy="603" r="7" fill="#C32424"/>
   <circle cx="56" cy="603" r="7" fill="#24C391"/>
   <circle cx="82" cy="603" r="7" fill="#C3A924"/>
