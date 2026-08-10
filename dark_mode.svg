@@ -8,7 +8,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&amp;display=swap');
       text, .base, .title, .sub {
         font-family: 'Cascadia Mono', monospace;
-        font-size: 13px;
+        font-size: 14px;
       }
     </style>
   </defs>
@@ -17,7 +17,7 @@
   <rect width="820" height="733" rx="12" ry="12"
         fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
 
-  <text x="38" y="46" font-weight="700" font-size="15px"><tspan fill="#30D9A4">akash</tspan><tspan fill="#30D9A4">@dev</tspan></text>
+  <text x="38" y="46" font-weight="700" font-size="16px"><tspan fill="#30D9A4">akash</tspan><tspan fill="#30D9A4">@dev</tspan></text>
   <text x="38" y="69" fill="#3B4D68">──────────────────────────────────────────────────────────────</text>
   <text x="38" y="92"><tspan fill="#E8ECF2" font-weight="600">OS</tspan><tspan fill="#3B4D68">......................</tspan><tspan fill="#E8ECF2"> Linux  /  Windows 11</tspan></text>
   <text x="38" y="115"><tspan fill="#E8ECF2" font-weight="600">Uptime</tspan><tspan fill="#3B4D68">..................</tspan><tspan fill="#E8ECF2"> 24 years</tspan></text>
@@ -34,11 +34,11 @@
   <text x="38" y="414"><tspan fill="#E8ECF2" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#E8ECF2"> aksnr</tspan></text>
   <text x="38" y="460" fill="#30D9A4" font-weight="700">── GitHub Stats ──────────────────────────────────</text>
   <text x="38" y="483" fill="#3B4D68">······························································</text>
-  <text x="38" y="506"><tspan fill="#E8ECF2" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 4</tspan></text>
-  <text x="38" y="529"><tspan fill="#E8ECF2" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 0</tspan></text>
-  <text x="38" y="552"><tspan fill="#E8ECF2" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#E8ECF2"> 12</tspan></text>
-  <text x="38" y="575"><tspan fill="#E8ECF2" font-weight="600">Followers</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#E8ECF2"> 0</tspan></text>
-  <text x="38" y="598"><tspan fill="#E8ECF2" font-weight="600">Lines of Code</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#E8ECF2"> 2  (+2 / -0)</tspan></text>
+  <text x="38" y="506"><tspan fill="#E8ECF2" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 10</tspan></text>
+  <text x="38" y="529"><tspan fill="#E8ECF2" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#E8ECF2"> 5</tspan></text>
+  <text x="38" y="552"><tspan fill="#E8ECF2" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#E8ECF2"> 100</tspan></text>
+  <text x="38" y="575"><tspan fill="#E8ECF2" font-weight="600">Followers</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#E8ECF2"> 50</tspan></text>
+  <text x="38" y="598"><tspan fill="#E8ECF2" font-weight="600">Lines of Code</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#E8ECF2"> 1,200  (+1,000 / -200)</tspan></text>
   <circle cx="46" cy="639" r="7" fill="#C32424"/>
   <circle cx="72" cy="639" r="7" fill="#24C391"/>
   <circle cx="98" cy="639" r="7" fill="#C3A924"/>

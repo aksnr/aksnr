@@ -248,7 +248,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
       @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&amp;display=swap');
       text, .base, .title, .sub {{
         font-family: 'Cascadia Mono', monospace;
-        font-size: 13px;
+        font-size: 14px;
       }}
     </style>
   </defs>
@@ -287,7 +287,7 @@ def render_svg(lines: list[tuple], theme_name: str, out_path: str) -> None:
             u_part  = _esc(text[:at_pos])
             at_part = _esc(text[at_pos:])
             parts.append(
-                f'  <text x="{x}" y="{y}" font-weight="700" font-size="15px">'
+                f'  <text x="{x}" y="{y}" font-weight="700" font-size="16px">'
                 f'<tspan fill="{t["accent"]}">{u_part}</tspan>'
                 f'<tspan fill="{t["at"]}">{at_part}</tspan>'
                 f'</text>\n'
