@@ -189,10 +189,10 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     # ── Stack & Languages ─────────────────────────────────────────────────
     add("── Stack & Languages ─────────────────────────────", "section")
     add("·" * 62, "dim")
-    L.append(_kv("Languages.Programming",  "JavaScript, Python, Bash"))
-    L.append(_kv("Stack.Web & Frameworks", "React.js, Express.js, Node.js, HTML5, CSS3"))
-    L.append(_kv("Databases",             "MongoDB, PostgreSQL, SQL, Git"))
-    L.append(_kv("Focus.Areas",           "MERN Stack, Systems & Linux, Cybersecurity"))
+    L.append(_kv("Programming Languages",  "JavaScript, Python, Bash"))
+    L.append(_kv("Frameworks", "React.js, Express.js, Node.js, HTML5, CSS3"))
+    L.append(_kv("Databases",             "MongoDB, PostgreSQL, SQL"))
+    L.append(_kv("Focus Areas",           "MERN Stack, Systems & Linux, Cybersecurity"))
     add("", "blank")
 
     # ── Contact ──────────────────────────────────────────────────────────
