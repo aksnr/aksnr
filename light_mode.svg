@@ -34,9 +34,9 @@
   <text x="38" y="414"><tspan fill="#0D1117" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#0D1117"> aksnr</tspan></text>
   <text x="38" y="460" fill="#2351BE" font-weight="700">── GitHub Stats ────────────────────────────────────────────────────────</text>
   <text x="38" y="483" fill="#3B4D68">········································································</text>
-  <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 10</tspan></text>
-  <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 5</tspan></text>
-  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 100</tspan></text>
+  <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 4</tspan></text>
+  <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 0</tspan></text>
+  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 15</tspan></text>
   <circle cx="46" cy="593" r="7" fill="#C32424"/>
   <circle cx="72" cy="593" r="7" fill="#24C391"/>
   <circle cx="98" cy="593" r="7" fill="#C3A924"/>
