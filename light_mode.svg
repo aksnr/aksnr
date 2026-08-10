@@ -26,7 +26,7 @@
   <text x="38" y="207" fill="#3B4D68">······························································</text>
   <text x="38" y="230"><tspan fill="#0D1117" font-weight="600">Programming Languages</tspan><tspan fill="#3B4D68">...</tspan><tspan fill="#0D1117"> JavaScript, Python, Bash</tspan></text>
   <text x="38" y="253"><tspan fill="#0D1117" font-weight="600">Frameworks</tspan><tspan fill="#3B4D68">..............</tspan><tspan fill="#0D1117"> React.js, Express.js, Node.js, HTML5, CSS3</tspan></text>
-  <text x="38" y="276"><tspan fill="#0D1117" font-weight="600">Databases</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> MongoDB, PostgreSQL, SQL, Git</tspan></text>
+  <text x="38" y="276"><tspan fill="#0D1117" font-weight="600">Databases</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> MongoDB, PostgreSQL, SQL</tspan></text>
   <text x="38" y="299"><tspan fill="#0D1117" font-weight="600">Focus Areas</tspan><tspan fill="#3B4D68">.............</tspan><tspan fill="#0D1117"> MERN Stack, Systems &amp; Linux, Cybersecurity</tspan></text>
   <text x="38" y="345" fill="#2351BE" font-weight="700">── Contact ───────────────────────────────────────</text>
   <text x="38" y="368" fill="#3B4D68">······························································</text>
@@ -34,11 +34,11 @@
   <text x="38" y="414"><tspan fill="#0D1117" font-weight="600">LinkedIn</tspan><tspan fill="#3B4D68">................</tspan><tspan fill="#0D1117"> aksnr</tspan></text>
   <text x="38" y="460" fill="#2351BE" font-weight="700">── GitHub Stats ──────────────────────────────────</text>
   <text x="38" y="483" fill="#3B4D68">······························································</text>
-  <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 10</tspan></text>
-  <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 5</tspan></text>
-  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 100</tspan></text>
-  <text x="38" y="575"><tspan fill="#0D1117" font-weight="600">Followers</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> 50</tspan></text>
-  <text x="38" y="598"><tspan fill="#0D1117" font-weight="600">Lines of Code</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#0D1117"> 1,200  (+1,000 / -200)</tspan></text>
+  <text x="38" y="506"><tspan fill="#0D1117" font-weight="600">Repos</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 4</tspan></text>
+  <text x="38" y="529"><tspan fill="#0D1117" font-weight="600">Stars</tspan><tspan fill="#3B4D68">...................</tspan><tspan fill="#0D1117"> 0</tspan></text>
+  <text x="38" y="552"><tspan fill="#0D1117" font-weight="600">Commits</tspan><tspan fill="#3B4D68">.................</tspan><tspan fill="#0D1117"> 11</tspan></text>
+  <text x="38" y="575"><tspan fill="#0D1117" font-weight="600">Followers</tspan><tspan fill="#3B4D68">...............</tspan><tspan fill="#0D1117"> 0</tspan></text>
+  <text x="38" y="598"><tspan fill="#0D1117" font-weight="600">Lines of Code</tspan><tspan fill="#3B4D68">...........</tspan><tspan fill="#0D1117"> 2  (+2 / -0)</tspan></text>
   <circle cx="46" cy="639" r="7" fill="#C32424"/>
   <circle cx="72" cy="639" r="7" fill="#24C391"/>
   <circle cx="98" cy="639" r="7" fill="#C3A924"/>
