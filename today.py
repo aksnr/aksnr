@@ -109,13 +109,11 @@ def fetch_github_stats(token: str) -> dict:
               orderBy: {field: PUSHED_AT, direction: DESC}
             ) {
               totalCount
-              nodes { stargazerCount nameWithOwner }
+              nodes { stargazerCount }
             }
             contributionsCollection {
               totalCommitContributions
-              totalPullRequestContributions
             }
-            followers { totalCount }
           }
         }
         """,
@@ -125,40 +123,14 @@ def fetch_github_stats(token: str) -> dict:
     gql_data = _gh_request(token, "https://api.github.com/graphql", gql_body)
     user     = gql_data["data"]["user"]
 
-    repos     = user["repositories"]["totalCount"]
-    stars     = sum(n["stargazerCount"] for n in user["repositories"]["nodes"])
-    commits   = user["contributionsCollection"]["totalCommitContributions"]
-    followers = user["followers"]["totalCount"]
-
-    # ── REST: contributor stats (additions / deletions) ───────────────────
-    repo_names = [n["nameWithOwner"] for n in user["repositories"]["nodes"]]
-    additions = deletions = 0
-
-    for repo in repo_names[:25]:          # cap to avoid rate-limit burn
-        owner, name = repo.split("/", 1)
-        try:
-            contribs = _gh_request(
-                token,
-                f"https://api.github.com/repos/{owner}/{name}/stats/contributors",
-            )
-            if not isinstance(contribs, list):
-                continue
-            for c in contribs:
-                if c.get("author", {}).get("login", "").lower() == GITHUB_USERNAME.lower():
-                    for w in c.get("weeks", []):
-                        additions += w.get("a", 0)
-                        deletions += w.get("d", 0)
-        except Exception:
-            pass  # skip repos with no stats yet
+    repos   = user["repositories"]["totalCount"]
+    stars   = sum(n["stargazerCount"] for n in user["repositories"]["nodes"])
+    commits = user["contributionsCollection"]["totalCommitContributions"]
 
     return {
-        "repos"    : repos,
-        "stars"    : stars,
-        "commits"  : commits,
-        "followers": followers,
-        "additions": additions,
-        "deletions": deletions,
-        "loc"      : additions + deletions,
+        "repos"  : repos,
+        "stars"  : stars,
+        "commits": commits,
     }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -208,10 +180,6 @@ def build_lines(stats: dict, uptime: str) -> list[tuple]:
     L.append(_kv("Repos",         str(stats["repos"])))
     L.append(_kv("Stars",         str(stats["stars"])))
     L.append(_kv("Commits",       str(stats["commits"])))
-    L.append(_kv("Followers",     str(stats["followers"])))
-    L.append(_kv("Lines of Code",
-                 f"{stats['loc']:,}  "
-                 f"(+{stats['additions']:,} / -{stats['deletions']:,})"))
     add("", "blank")
 
     # ── Colour swatch ─────────────────────────────────────────────────────
@@ -378,9 +346,7 @@ def main() -> None:
         sys.exit(1)
 
     print(f"   repos={stats['repos']}  stars={stats['stars']}  "
-          f"commits={stats['commits']}  followers={stats['followers']}")
-    print(f"   loc={stats['loc']:,}  "
-          f"(+{stats['additions']:,} / -{stats['deletions']:,})")
+          f"commits={stats['commits']}")
 
     # 3. Build layout
     print("→  Building SVG lines …")
